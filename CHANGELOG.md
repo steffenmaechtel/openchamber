@@ -38,6 +38,7 @@ All notable changes to this project will be documented in this file.
 - Devices: re-pairing a phone (or logging in again) keeps the device's existing name in Connected Devices instead of resetting it to "OpenChamber Mobile".
 - Relay: paired devices no longer get logged out when the app restarts (for example during an update) while another local OpenChamber process is running — the restarted app keeps serving them instead of a bystander process taking over.
 - **Chats:** set `OPENCHAMBER_CHATS_DIR` to relocate projectless-chat working directories out of your home folder — for example to a shared location when OpenCode runs as its own user.
+- Settings: the app no longer re-locks its config and credential directories to owner-only permissions on every write, which silently revoked access an administrator had granted — relevant when the OpenCode server runs as a separate user.
 
 ## [1.20.0] - 2026-08-23
 
